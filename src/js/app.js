@@ -10,6 +10,6 @@ function reactToClick() {
     const month = monthEl.value;
     const result = findHoroscope(month, day);
     resultEl.textContent = result;
-};
+}
 
 defineEl.addEventListener('click', reactToClick);

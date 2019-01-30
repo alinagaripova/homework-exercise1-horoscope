@@ -1,97 +1,30 @@
 import {findHoroscope} from "../js/lib";
 
-test('should say horoscope', () =>{
-    const result = findHoroscope('Январь',15);
-    expect(result).toBe('Козерог');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Январь',25);
-    expect(result).toBe('Водолей');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Февраль',15);
-    expect(result).toBe('Водолей');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Февраль',25);
-    expect(result).toBe('Рыбы');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Март',15);
-    expect(result).toBe('Рыбы');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Март',25);
-    expect(result).toBe('Овен');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Апрель',15);
-    expect(result).toBe('Овен');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Апрель',25);
-    expect(result).toBe('Телец');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Май',15);
-    expect(result).toBe('Телец');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Май',25);
-    expect(result).toBe('Близнецы');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Июнь',15);
-    expect(result).toBe('Близнецы');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Июнь',25);
-    expect(result).toBe('Рак');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Июль',15);
-    expect(result).toBe('Рак');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Июль',25);
-    expect(result).toBe('Лев');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Август',15);
-    expect(result).toBe('Лев');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Сентябрь',15);
-    expect(result).toBe('Дева');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Сентябрь',25);
 
-    expect(result).toBe('Весы');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Октябрь',15);
-    expect(result).toBe('Весы');
-});
-
-test('should say horoscope', () =>{
-    const result = findHoroscope('Октябрь',25);
-    expect(result).toBe('Скорпион');
-});
-
-test('should say horoscope', () =>{
-    const result = findHoroscope('Ноябрь',15);
-    expect(result).toBe('Скорпион');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Ноябрь',25);
-    expect(result).toBe('Стрелец');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Декабрь',15);
-    expect(result).toBe('Стрелец');
-});
-test('should say horoscope', () =>{
-    const result = findHoroscope('Декабрь',25);
-    expect(result).toBe('Козерог');
+test.each([
+        ['horoscope', 'Январь', '15', 'Козерог'],
+        ['horoscope', 'Январь', '25', 'Водолей'],
+        ['horoscope', 'Февраль', '15', 'Водолей'],
+        ['horoscope', 'Февраль', '25', 'Рыбы'],
+        ['horoscope', 'Март', '15', 'Рыбы'],
+        ['horoscope', 'Март', '25', 'Овен'],
+        ['horoscope', 'Апрель', '15', 'Овен'],
+        ['horoscope', 'Апрель', '25', 'Телец'],
+        ['horoscope', 'Май', '15', 'Телец'],
+        ['horoscope', 'Май', '25', 'Близнецы'],
+        ['horoscope', 'Июнь', '15', 'Близнецы'],
+        ['horoscope', 'Июнь', '25', 'Рак'],
+        ['horoscope', 'Июль', '15', 'Рак'],
+        ['horoscope', 'Июль', '25', 'Лев'],
+        ['horoscope', 'Август', '15', 'Лев'],
+        ['horoscope', 'Август', '25', 'Дева'],
+        ['horoscope', 'Сентябрь', '15', 'Дева'],
+        ['horoscope', 'Сентябрь', '25', 'Весы'],
+        ['horoscope', 'Октябрь', '15', 'Весы'],
+        ['horoscope', 'Октябрь', '25', 'Скорпион'],
+        ['horoscope', 'Декабрь', '15', 'Стрелец'],
+        ['horoscope', 'Декабрь', '25', 'Козерог'],
+])('should say %s',(name, month, day, expected) => {
+    const result  = findHoroscope(month,day);
+    expect(result).toBe(expected);
 });

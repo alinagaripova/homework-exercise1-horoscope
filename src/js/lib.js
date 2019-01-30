@@ -1,6 +1,6 @@
  export function findHoroscope(month, day) {
 
-    const сapricorn = 'Козерог';
+    const capricorn = 'Козерог';
     const aquarius = 'Водолей';
     const fish = 'Рыбы';
     const aries = 'Овен';
@@ -16,7 +16,7 @@
 
     if (month === 'Январь') {
         if (day <= 19) {
-            result = сapricorn;
+            result = capricorn;
         } else {
             result = aquarius;
         }}
@@ -84,7 +84,7 @@
         if (day <= 21){
             result = sagittarius;
         } else {
-            result = сapricorn;
+            result = capricorn;
         }}
 
     return result;
