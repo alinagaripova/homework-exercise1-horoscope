@@ -1,0 +1,2 @@
+# Homework Horoscope
+[![Build Status](https://travis-ci.org/alinagaripova/homework-exercise1.horoscope.svg?branch=master)](https://travis-ci.org/alinagaripova/homework-exercise1.horoscope) [![codecov](https://codecov.io/gh/alinagaripova/homework-exercise1.horoscope/branch/master/graph/badge.svg)](https://codecov.io/gh/alinagaripova/homework-exercise1.horoscope)
